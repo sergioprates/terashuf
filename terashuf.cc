@@ -242,6 +242,12 @@ int main()
         return 1;
     }
 
+    if(stdin == NULL)
+    {
+        fprintf(stderr, "File input empty\n");
+        return 1;
+    }
+
     fprintf(stderr, "\nstarting read\n");
 
     for (int i = 0; i < skipLines;)
@@ -360,5 +366,6 @@ int main()
         }
     }
     fprintf(stderr, "\ndone\n");
+
     return 0;
 }
